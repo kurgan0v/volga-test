@@ -1,0 +1,51 @@
+.wrap{
+  width: 100%;
+  overflow: hidden;
+}
+.wrapper{
+  max-width: 1440px;
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 50px;
+  position: relative;
+}
+.contactInfo{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.phones{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.links{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.link{
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: .38s ease-in-out;
+}
+.link:hover{
+  color: var(--color-primary);
+}
+.chapter{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.subtitle, .serviceLink{
+  min-width: max-content;
+}
+.circle{
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%) translateX(50%);
+  right: 0;
+  z-index: 0;
+}

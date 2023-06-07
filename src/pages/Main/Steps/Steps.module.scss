@@ -1,0 +1,53 @@
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
+  padding: 80px 0;
+}
+.title{
+  text-align: center;
+  font-size: 50px;
+  font-weight: 900;
+}
+.steps{
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  position: relative;
+}
+.step{
+  background: #232228;
+  padding: 60px 15px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  border-radius: 30px;
+}
+.stepInfo{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.stepTitle{
+  font-size: 50px;
+  font-weight: 900;
+}
+.stepText{
+  font-size: 20px;
+  font-weight: 400;
+  width: 600px;
+}
+.stepReverse{
+  flex-direction: row-reverse;
+  z-index: 3;
+  position: relative;
+}
+.circleImg{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(50%) rotate(-90deg);
+  right: 0;
+
+  z-index: 2;
+}

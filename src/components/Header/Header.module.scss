@@ -1,0 +1,66 @@
+.wrapper{
+  background: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+}
+.nav{
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  padding: 20px 70px;
+  column-gap: 60px;
+  justify-content: space-between;
+}
+.chapters{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.chapter{
+  color: var(--color-text);
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: .38s ease-in-out;
+  cursor: pointer;
+}
+.chapter:hover{
+  border-color: #FFFFFF;
+}
+.contactInfo{
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.phones{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.phone{
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: .38s ease-in-out;
+}
+.phone:hover{
+  color: var(--color-primary);
+}
+.regions{
+  width: 230px;
+}
+.regionSelect{
+  position: relative;
+}
+.prefixIcon{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+}

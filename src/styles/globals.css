@@ -1,0 +1,40 @@
+:root {
+  --color-primary: #FF9F02;
+  --color-text: #FFFFFF;
+  --color-bg: #202020;
+  --color-bg-second: #3B3945;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: var(--color-text);
+}
+
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--color-bg) url("../../public/bg.png");
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+section{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

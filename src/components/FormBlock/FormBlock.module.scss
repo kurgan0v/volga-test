@@ -1,0 +1,43 @@
+.whiteWrapper{
+  background: #ffffff;
+  width: 100%;
+  padding: 120px 0;
+  overflow: hidden;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  position: relative;
+}
+.wrapTitle{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.wrapTitle p{
+  color: var(--color-bg);
+  width: 660px;
+  font-size: 20px;
+}
+.title{
+  font-size: 50px;
+  font-weight: 900;
+  color: var(--color-bg);
+}
+.circle{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-80%);
+  left: 0;
+  z-index: 0;
+}
+.form{
+  background: #FFFFFF;
+  box-shadow: 0 8px 8px rgba(190, 190, 190, 0.25);
+  border-radius: 30px;
+  padding: 45px;
+  position: relative;
+  z-index: 2;
+  width: max-content;
+}
