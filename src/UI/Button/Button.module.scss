@@ -4,12 +4,20 @@
   box-shadow: 0px 4px 8px rgba(255, 159, 2, 0.2);
   border-radius: 5px;
   border: none;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 900;
   height: auto;
-  padding: 10px 25px;
+  padding: 8px 20px;
   transition: .38s ease-in-out;
 }
 .btn:hover{
   background: #CB7E00;
+}
+.btn.ant-btn-primary:not(:disabled):hover{
+  background: #CB7E00;
+}
+@media (max-width: 576px){
+  .btn{
+    font-size: 18px;
+  }
 }

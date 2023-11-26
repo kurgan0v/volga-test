@@ -1,0 +1,44 @@
+.title{
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--color-bg);
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  p, span, h2, h3, svg, div{
+    color: var(--color-bg);
+  }
+  h2{
+    margin-bottom: 10px;
+  }
+  button span{
+    color: var(--color-text);
+  }
+  input, textarea{
+    width: 500px;
+  }
+}
+.formWrapper{
+  display: flex;
+  column-gap: 30px;
+}
+
+@media (max-width: 1400px){
+  .formWrapper{
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px){
+  .title{
+    font-size: 23px;
+  }
+}
+@media (max-width: 576px){
+  .form{
+    input, textarea{
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.wrap{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.title{
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  p{
+    font-size: 20px;
+    font-weight: 700;
+  }
+  svg{
+    transition: .38s ease-in-out;
+    cursor: pointer;
+    &:hover{
+      color: var(--color-primary);
+    }
+  }
+}
+
+.editBullets{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.bulletContent{
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.editBullet{
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  column-gap: 20px;
+  background: var(--color-text);
+  box-shadow: 0 8px 8px rgba(190, 190, 190, 0.25);
+}
+.action{
+  transition: .38s ease-in-out;
+  min-width: 25px;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+.action:hover{
+  color: var(--color-primary);
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.titleBullet{
+  font-size: 18px;
+  font-weight: 700;
+}
+.subtitle{
+  font-weight: 700;
+}
+.bulletActions{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.img{
+  background: #eee;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media(max-width: 576px){
+  .editBullet, .bulletContent{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

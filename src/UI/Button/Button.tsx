@@ -5,7 +5,7 @@ import {Button} from "antd";
 
 const ButtonCustom = (props:any) => {
     return (
-        <Button className={s.btn}>{props.children}</Button>
+        <Button {...props} className={`${s.btn} ${props.className}`}>{props.children}</Button>
     );
 };
 

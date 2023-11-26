@@ -1,0 +1,69 @@
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  padding: 48px 0;
+  position: relative;
+}
+.title{
+  text-align: center;
+  width: 704px;
+}
+.numbers{
+  display: flex;
+  column-gap: 120px;
+}
+.numberInfo{
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.number{
+  font-size: 72px;
+  font-weight: 200;
+}
+.numberTitle{
+  font-size: 20px;
+  font-weight: 800;
+}
+.numberText{
+  font-size: 18px;
+  width: 250px;
+}
+.circle{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: -1;
+  left: 0;
+}
+
+@media (max-width: 1250px){
+  .numbers{
+    column-gap: 40px;
+  }
+}
+@media (max-width: 991px){
+  .numbers{
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .title{
+    width: 505px;
+  }
+  .numberText{
+    width: 100%;
+  }
+  .wrapper{
+    padding: 48px 20px;
+  }
+}
+@media (max-width: 576px){
+  .numberText{
+    font-size: 16px;
+  }
+  .title{
+    width: 100%;
+  }
+}

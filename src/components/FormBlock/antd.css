@@ -1,23 +1,23 @@
 .ant-form{
     display: flex;
-    column-gap: 40px;
+    gap: 32px;
     align-items: flex-end;
 }
 .ant-form, .ant-form * {
     font-family: inherit;
 }
 .ant-form-vertical .ant-form-item-label >label{
-    font-size: 18px;
+    font-size: 16px;
 }
-.ant-input{
-    padding: 15px 25px;
-    border: none;
-    background: #FFFFFF;
-    box-shadow: 0 8px 8px rgba(190, 190, 190, 0.25);
-    border-radius: 30px;
-    width: 300px;
-    font-size: 18px;
+.ant-message span{
+    color: var(--color-bg);
 }
-.ant-input:focus{
-    box-shadow: 0 0 0 2px rgba(255, 159, 2, .2);
+@media (max-width: 991px) {
+    .ant-form{
+        display: block;
+    }
+    .formBlock .ant-input{
+        width: 100%;
+    }
+
 }

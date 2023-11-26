@@ -4,7 +4,7 @@
 .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item, .ant-select-dropdown .ant-select-item{
     background: var(--color-bg);
     border-radius: 0;
-    padding: 10px 15px;
+    padding: 8px 12px;
     color: var(--color-text);
     font-weight: 600;
 }
@@ -29,7 +29,7 @@
     background: transparent;
 }
 .ant-select-single .ant-select-selector .ant-select-selection-item{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: #ffffff;
 }

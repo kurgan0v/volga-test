@@ -1,0 +1,93 @@
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  padding: 64px 0;
+}
+.title{
+  text-align: center;
+}
+.steps{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  position: relative;
+}
+.step{
+  background: #232228;
+  padding: 48px 20px;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  border-radius: 24px;
+  z-index: -2;
+  position: relative;
+}
+.stepImg{
+  width: 400px;
+  height: auto;
+}
+.stepInfo{
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.stepTitle{
+  font-size: 40px;
+  font-weight: 900;
+}
+.stepText{
+  font-size: 18px;
+  font-weight: 400;
+  width: 600px;
+}
+.stepReverse{
+  flex-direction: row-reverse;
+  z-index: 1;
+  position: relative;
+}
+.circleImg{
+  width: 560px;
+  height: 560px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(50%) rotate(-90deg);
+  right: 0;
+
+  z-index: -1;
+}
+
+@media (max-width: 1250px){
+  .wrapper{
+    padding: 60px 20px;
+  }
+  .stepText{
+    width: auto;
+    max-width: 500px;
+  }
+}
+@media (max-width: 991px){
+  .stepTitle{
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px){
+  .step{
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px){
+  .stepImg{
+    width: 260px;
+  }
+  .stepText{
+    font-size: 16px;
+  }
+  .stepTitle{
+    font-size: 20px;
+  }
+  .circleImg{
+    top: 46%;
+  }
+}

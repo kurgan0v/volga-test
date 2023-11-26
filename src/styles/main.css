@@ -1,0 +1,23 @@
+
+.ant-select-item-option-content{
+    color: var(--color-text);
+}
+h1, h2{
+    font-size: 40px;
+    font-weight: 900;
+}
+@media (max-width: 991px){
+    h1, h2{
+        font-size: 35px;
+    }
+}
+@media (max-width: 768px){
+    h1, h2{
+        font-size: 30px;
+    }
+}
+@media (max-width: 576px){
+    h1, h2{
+        font-size: 25px;
+    }
+}

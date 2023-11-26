@@ -1,0 +1,85 @@
+.wrapper{
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text{
+  color: var(--color-bg);
+}
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  padding: 70px;
+  border-radius: 30px;
+  background: var(--color-text);
+  position: relative;
+}
+.title{
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  color: var(--color-bg);
+}
+.btnForm{
+  width: 100%;
+  margin-top: 20px;
+}
+.circle{
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.sessions{
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-top: 20px;
+}
+.session{
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  p{
+    width: 150px;
+    color: var(--color-bg);
+  }
+  svg{
+    color: var(--color-bg);
+  }
+}
+.action{
+  transition: .38s ease-in-out;
+  min-width: 25px;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+.action:hover{
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px){
+    .btnForm{
+      margin-top: 0;
+    }
+    .title{
+      font-size: 23px;
+    }
+    .loginForm{
+      border-radius: 20px;
+      row-gap: 20px;
+      padding: 30px 35px 10px;
+    }
+  .circle{
+    width: 600px;
+    object-fit: contain;
+  }
+}

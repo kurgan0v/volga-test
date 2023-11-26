@@ -2,60 +2,36 @@ import s from './Footer.module.scss';
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-const Footer = () => {
-    const phones = [
-        {
-            phone: "+7 (909) 090-90-09",
-            link: "+79090909009"
-        },
-        {
-            phone: "+7 (909) 090-90-09",
-            link: "+79090909009"
-        }
-    ];
+import {LayoutInfo} from "@/types/info";
+import CustomImage from "@/components/CustomImage/CustomImage";
+const Footer = ({data}:{data: LayoutInfo}) => {
+
     return (
         <div className={s.wrap}>
             <section className={s.wrapper}>
                 <div className={s.contactInfo}>
-                    <Image src={'/logo_blue.png'} alt={'logo'} width={100} height={96}/>
+                    <Link href={'/'}><CustomImage src={data.logo.value} alt={data.logo.name} width={100} height={96}/></Link>
                     <div className={s.links}>
-                        {phones.map((p)=>(
-                            <a className={s.link} href={`tel:${p.link}`} key={p.link}>{p.phone}</a>
+                        {data.phones.map((p)=>(
+                            <a className={s.link} href={`tel:+${p.phone.replace(/[^0-9]/g,"")}`} key={p.id}>{p.phone}</a>
                         ))}
                     </div>
-                    <a className={s.link} href={`mailto:info@volga-test.ru`} >info@volga-test.ru</a>
-                    <p>Саратов, улица имени Е.И. Пугачёва, 159</p>
+                    <a className={s.link} href={`mailto:${data.email.name}`}>{data.email.name}</a>
+                    <p>{data.address.name}</p>
                 </div>
-                <div className={s.chapter}>
-                    <h3 className={s.subtitle}>Обязательная сертификация</h3>
-                    <Link className={s.serviceLink} href={'/required/id'}>Сертификация ТР ТС</Link>
-                    <Link className={s.serviceLink} href={'/required/id'}>Декларация ТР ТС</Link>
-                    <Link className={s.serviceLink} href={'/required/id'}>Сертификация ГОСТ Р</Link>
-                    <Link className={s.serviceLink} href={'/required/id'}>Декларация ГОСТ Р</Link>
-                    <Link className={s.serviceLink} href={'/required/id'}>ЭЗ Роспотребнадзора</Link>
-                    <Link className={s.serviceLink} href={'/required/id'}>СГР (государственная регистрация)</Link>
-                    <Link className={s.serviceLink} href={'/required/id'}>ССПБ (пожарная безопасность)</Link>
-                    <Link className={s.serviceLink} href={'/required/id'}>Разрешительная документация</Link>
-                </div>
-                <div className={s.chapter}>
-                    <h3 className={s.subtitle}>Добровольная сертификация</h3>
-                    <Link className={s.serviceLink} href={'/voluntary/id'}>Пожарная безопасность</Link>
-                    <Link className={s.serviceLink} href={'/voluntary/id'}>Антитеррор</Link>
-                    <Link className={s.serviceLink} href={'/voluntary/id'}>Сертификация ISO</Link>
-                    <Link className={s.serviceLink} href={'/voluntary/id'}>Сертификат РПО</Link>
-                    <Link className={s.serviceLink} href={'/voluntary/id'}>Промышленная безопасность</Link>
-                    <Link className={s.serviceLink} href={'/voluntary/id'}>Сертификация сооружений</Link>
-                    <Link className={s.serviceLink} href={'/voluntary/id'}>Сертификация для экспорта</Link>
-                    <Link className={s.serviceLink} href={'/voluntary/id'}>Добровольный сертификат ГОСТ Р</Link>
-                </div>
-                <div className={s.chapter}>
-                    <h3 className={s.subtitle}>Услуги</h3>
-                    <Link className={s.serviceLink} href={'/services/id'}>Нормативно-техническая документация</Link>
-                    <Link className={s.serviceLink} href={'/services/id'}>Технические условия на продукцию</Link>
-                    <Link className={s.serviceLink} href={'/services/id'}>Штрихкодирование</Link>
-                    <Link className={s.serviceLink} href={'/services/id'}>Отказное письмо</Link>
-                    <Link className={s.serviceLink} href={'/services/id'}>СБКТС</Link>
-                </div>
+                {data.services.map((service,i) => (
+                    <div className={s.lastChapter} key={service.id}><div className={s.chapter} >
+                        <h3 className={s.subtitle}>{service.name}</h3>
+                        {service.services.map(serv => (
+                            <Link className={s.serviceLink} href={`/service/${serv.id}`} key={serv.id}>{serv.link_title}</Link>
+                        ))}
+
+                    </div>{data.services.length - 1 === i ? <div className={s.socials}>
+                        {data.socials.map(social => (
+                            <a href={social.name} key={social.id}><Image src={`/${social.value}`} width={35} height={35} alt={"social"}/></a>
+                        ))}
+                    </div> : null}</div>
+                ))}
                 <Image className={s.circle} src={'/circleBlur.png'} alt={'circle'} width={570} height={570}/>
             </section>
         </div>

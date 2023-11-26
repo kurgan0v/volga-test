@@ -1,0 +1,60 @@
+.wrapper{
+  padding: 250px 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+.circleImg{
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  z-index: -1;
+  rotate: 200deg;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-left: 500px;
+  row-gap: 12px;
+}
+.lottie{
+  position: absolute;
+  width: 600px;
+}
+
+@media (max-width: 1250px){
+.lottie{
+  left: -100px;
+}
+  .content{
+    margin-left: 400px;
+  }
+}
+@media (max-width: 991px){
+  .lottie{
+    position: static;
+  }
+  .wrapper{
+    flex-direction: column;
+    padding: 40px 20px 80px;
+  }
+  .content{
+    margin-left: 0;
+  }
+
+}
+@media (max-width: 768px) {
+  .lottie{
+    width: 500px;
+  }
+}
+@media (max-width: 576px) {
+  .lottie{
+    width: 300px;
+  }
+  .content{
+    width: 100%;
+  }
+}
