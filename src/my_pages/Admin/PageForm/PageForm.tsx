@@ -105,36 +105,37 @@ const PageForm = ({page, refetch}: { page: Service | undefined, refetch: any }) 
                 <Form.Item name={'published'} valuePropName={'checked'}>
                     <Checkbox>Опубликовать</Checkbox>
                 </Form.Item>
-                <Form.Item name={"meta_title"} label={'Meta Title'} required>
-                    <Input/>
-                </Form.Item>
-                <Form.Item name={"meta_text"} label={'Meta Description'}>
-                    <Input.TextArea/>
-                </Form.Item>
-                <Form.Item name={"meta_keywords"} label={'Meta Keywords'}>
-                    <Input.TextArea/>
-                </Form.Item>
-                <div className={s.images}>
-                    <UploadImage list={iconImages} setList={setIconImages}/>
-                    <UploadImage list={bgImages} setList={setBgImages}/>
-                </div>
                 <Form.Item name={"type"} label={"Раздел"} required>
-                    <Select>
+                    <Select placeholder={'Выберите раздел'}>
                         {isSuccess && data.map((el) => (
                             <Option value={el.id} key={el.id}>{el.name}</Option>
                         ))}
                     </Select>
                 </Form.Item>
-                <Form.Item name={"link_title"} label={'Заголовок ссылки'} required>
-                    <Input/>
+                <Form.Item name={"meta_title"} label={'Meta Title'} required>
+                    <Input placeholder={'Сертификация ЕАЭС'}/>
+                </Form.Item>
+                <Form.Item name={"meta_text"} label={'Meta Description'}>
+                    <Input.TextArea placeholder={'Сертификат соответствия Таможенного Союза или наче называемый "Сертификат EAC" - относится к официальным документам, подтверждающим высокий уровень качества выпускаемой или изготавливаемой продукции, а также полное соответствие всех её характеристик и свойств утверждённым и действующим требованиям и нормам государственных стандартов.'}/>
+                </Form.Item>
+                <Form.Item name={"meta_keywords"} label={'Meta Keywords'}>
+                    <Input.TextArea placeholder={'сертификат, еаэс, евразийский экономический союз'}/>
+                </Form.Item>
+                <div className={s.images}>
+                    <UploadImage list={iconImages} setList={setIconImages}/>
+                    <UploadImage list={bgImages} setList={setBgImages}/>
+                </div>
+
+                <Form.Item name={"link_title"} label={'Название ссылки'} required>
+                    <Input placeholder={'Сертификат ЕАЭС'}/>
                 </Form.Item>
                 <Form.Item name={"title"} label={'Название страницы'} required>
-                    <Input/>
+                    <Input placeholder={'Сертификат соответствия техническому регламенту Таможенного союза (ТР ТС)'}/>
                 </Form.Item>
                 <Form.Item name={"main_title"} label={'Заголовок текста'} required>
                     <Input/>
                 </Form.Item>
-                <Form.Item name={"main_text"} label={'Текст на главной'} required>
+                <Form.Item name={"main_text"} label={'Текст'} required>
                     <Input.TextArea rows={6}/>
                 </Form.Item>
                 {isSuccessLinks && <Form.Item name={"links"} label={"Ссылки на документы"}>
